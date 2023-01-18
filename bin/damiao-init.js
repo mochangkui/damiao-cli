@@ -17,7 +17,8 @@ let damiaoTemplates = require(tPath)
 
 // 定义damiao init <template-name> [project-name]
 program
-  .usage('(damiao init) <template-name> [project-name]')
+  .usage('<template-name> [project-name]')
+  .command('test', 'add a damiao template')
   .parse(process.argv)
 
 // 当没有输入参数的时候，也就是直接使用damiao init命令
@@ -25,7 +26,6 @@ if (program.args.length < 1) {
   program.help()
   return
 }
-
 // 获取用户输入的参数
 let tName = program.args[0]
 let pName = 'project/' + program.args[1]
