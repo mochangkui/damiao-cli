@@ -11,7 +11,7 @@
     "damiao-add": "./bin/damiao-add.js",
     "damiao-delete": "./bin/damiao-delete.js",
     "damiao-list": "./bin/damiao-list.js",
-    "damiao-init1": "./bin/damiao-init.js"
+    "damiao-init-test": "./bin/damiao-init.js"
   },
   "keywords": [],
   "author": "",
