@@ -17,8 +17,8 @@ let damiaoTemplates = require(tPath)
 
 // 定义damiao init <template-name> [project-name]
 program
-  .usage('<template-name> [project-name]')
-  .command('test', 'add a damiao template')
+  .usage('[project-name]')
+  .option('-f, --force', '是否强制初始化项目')
   .parse(process.argv)
 
 // 当没有输入参数的时候，也就是直接使用damiao init命令
@@ -26,10 +26,10 @@ if (program.args.length < 1) {
   program.help()
   return
 }
+
 // 获取用户输入的参数
 let tName = program.args[0]
 let pName = 'project/' + program.args[1]
-console.log(pName)
 if (damiaoTemplates.filter(v => (v.name === tName)).length == 0) {
   chalk.then((chalk) => {
     console.log(chalk.default.red('模板名称不存在，请使用damiao list命令查看可输入的模板'))
