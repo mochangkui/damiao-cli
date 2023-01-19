@@ -19,6 +19,7 @@ let damiaoTemplates = require(tPath)
 program
   .usage('[project-name]')
   .command('test [options]', 'this is test')
+  .command('test1 [options]', 'this is test1')
   .option('-f, --force', '是否强制初始化项目')
   .parse(process.argv)
 
